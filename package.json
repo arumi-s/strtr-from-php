@@ -1,7 +1,13 @@
 {
 	"name": "strtr-from-php",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "TypeScript implementation of strtr from PHP",
+	"type": "module",
+	"sideEffects": false,
+	"author": {
+		"name": "Arumi Sakura",
+		"url": "https://github.com/arumi-s"
+	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/arumi-s/strtr-from-php.git"
@@ -32,16 +38,15 @@
 	"devDependencies": {
 		"@semantic-release/changelog": "^6.0.3",
 		"@semantic-release/commit-analyzer": "^13.0.0",
+		"@semantic-release/git": "^10.0.1",
 		"@semantic-release/github": "^10.0.7",
 		"@semantic-release/npm": "^12.0.1",
 		"@semantic-release/release-notes-generator": "^14.0.1",
+		"@vitest/coverage-v8": "^1.6.0",
 		"prettier": "3.3.2",
 		"semantic-release": "^24.0.0",
 		"tsup": "8.1.0",
 		"typescript": "5.5.3",
 		"vitest": "1.6.0"
-	},
-	"dependencies": {
-		"@semantic-release/git": "^10.0.1"
 	}
 }
