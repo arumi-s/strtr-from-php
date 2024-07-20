@@ -1,6 +1,6 @@
 {
 	"name": "strtr-from-php",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "TypeScript implementation of strtr from PHP",
 	"type": "module",
 	"sideEffects": false,

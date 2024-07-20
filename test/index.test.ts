@@ -84,6 +84,25 @@ describe('strtr', () => {
 		).toBe('begin center stop');
 	});
 
+	// Testing with large length changes
+	it('should handle large length changes', () => {
+		expect(
+			strtr('abcdefghi', {
+				abc: 'defghijklmnghi',
+				def: '1234567890',
+				gh: '45',
+			}),
+		).toBe('defghijklmnghi123456789045i');
+
+		expect(
+			strtr('a quick brown fox jumps over the lazy dog', {
+				'the lazy dog': 'fox',
+				fox: 'dog',
+				quick: 'slow',
+			}),
+		).toBe('a slow brown dog jumps over fox');
+	});
+
 	// Testing error
 	it('should throw error when not enough arguments are provided', () => {
 		expect(() => (strtr as any)('abcdef')).toThrow('strtr() expects at least 2 parameters, 1 given');

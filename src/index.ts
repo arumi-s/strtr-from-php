@@ -53,7 +53,7 @@ export function strtr(string: string, from: string | { [key: string]: string }, 
 					// Replace the segment
 					characters.splice(index, key.length, ...from[key].split(''));
 					// Update the replaced indices
-					replacedIndices.fill(true, index, index + from[key].length);
+					replacedIndices.splice(index, key.length, ...new Array(from[key].length).fill(true));
 					// Move index forward by the length of the replacement
 					index += from[key].length;
 				} else {
